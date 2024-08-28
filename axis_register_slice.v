@@ -91,8 +91,6 @@ module axis_register_slice #(
         end else begin
           if (m_axis_ready)
             fwd_valid <= 1'b0;
-          else // if (~m_axis_ready)
-            fwd_valid <= 1'b1;
         end
       end
     end
@@ -125,8 +123,6 @@ module axis_register_slice #(
         else begin
           if (s_axis_valid)
             bwd_ready <= 1'b0;
-          else // if (~s_axis_valid)
-            bwd_ready <= 1'b1;
         end
       end
     end
